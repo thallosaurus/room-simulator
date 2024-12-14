@@ -16,11 +16,13 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     public GameObject menu;
 
-    public bool menuOpen = false;
+    private bool menuOpen = false;
     public float tiltFactor = 0;
 
     public Camera camera;
     //private double zoomFactor = 3.5f;
+
+    bool ignoreTiltInput = false;
 
 
     void OnEnable()
@@ -55,7 +57,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         float zoom = zoomAction.ReadValue<Vector2>().y;
         bool reading = escAction.ReadValue<float>() > 0;
 
-        if (clicked > 0)
+        if (clicked > 0 && !menuOpen)
         {
             room.transform.eulerAngles = new Vector3(
                 room.transform.eulerAngles.x,
@@ -82,9 +84,13 @@ public class NewMonoBehaviourScript : MonoBehaviour
             //camera.orthographicSize %= 35;
         }
 
-        if (reading)
-        {
-
+        if (escAction.triggered) {
+            menuOpen = !menuOpen;
         }
+        menu.SetActive(menuOpen);
+    }
+
+    public void Quit() {
+        Application.Quit();
     }
 }

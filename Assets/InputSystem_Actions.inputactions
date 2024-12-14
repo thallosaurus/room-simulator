@@ -66,7 +66,7 @@
                 {
                     "name": "",
                     "id": "0468f7a6-a9d0-427c-a697-7ff14b0122ba",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -98,11 +98,11 @@
                 },
                 {
                     "name": "",
-                    "id": "0540af0e-d67b-488d-94f5-46ccf8946c73",
-                    "path": "<Mouse>/rightButton",
+                    "id": "1ff54f7b-9e6f-4744-bf9a-99f95b64ff5d",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": "",
                     "action": "Tilt",
                     "isComposite": false,
                     "isPartOfComposite": false

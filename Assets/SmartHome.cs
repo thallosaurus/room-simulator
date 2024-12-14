@@ -25,7 +25,10 @@ public class SmartHome : MonoBehaviour
                 things[child.name] = child.gameObject;
             }
         }
+        Connect();
+    }
 
+    void Connect() {
         Task.Run(SetupWebsocket).Wait();
     }
 
